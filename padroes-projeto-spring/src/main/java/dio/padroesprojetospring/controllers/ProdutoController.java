@@ -14,6 +14,13 @@ import dio.padroesprojetospring.model.entities.Produto;
 import dio.padroesprojetospring.model.repositories.ProdutoRepository;
 import jakarta.validation.Valid;
 
+/**
+ * Esse {@link RestController} representa nossa <b>Facade</b>, pois abstrai toda
+ * a complexidade de integrações (Banco de Dados MySQL) em uma
+ * interface simples e coesa (API REST).
+ * 
+ * @author moraes-eduardo
+ */
 @RestController
 @RequestMapping("/api/produtos")
 public class ProdutoController {
