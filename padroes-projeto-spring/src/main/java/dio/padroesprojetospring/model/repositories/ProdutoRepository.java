@@ -6,3 +6,4 @@ import dio.padroesprojetospring.model.entities.Produto;
 public interface ProdutoRepository extends CrudRepository<Produto, Integer> {
     
 }
+
