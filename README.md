@@ -3,11 +3,11 @@
 ## 📚 Funcionalidades
 ### Cadastro dos dados abaixo no MySQL
 - Descrição do produto
-- Preço
-- Estoque
+- Preço do produto
+- Estoque do produto
 
 ## 🔧 Tecnologias utilizadas
-- Eclipse
+- Eclipse/VSCode
 - Postman
 - MySQL Workbench
       
@@ -16,6 +16,7 @@
 - Get - Listar todos os Produtos
 - Get - Listar um único produto por Id
 - Put - Editar um único produto por Id
+- Delete - Excluir um único produto por Id
 
 ## 🍃 Dependências Spring Boot
 ### Spring Initializr    Auto	
