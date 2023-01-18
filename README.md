@@ -15,6 +15,7 @@
 - Post - Inserir produto
 - Get - Listar todos os Produtos
 - Get - Listar um único produto por Id
+- Get - Listar Produtos por palavra chave da Descricao
 - Put - Editar um único produto por Id
 - Delete - Excluir um único produto por Id
 

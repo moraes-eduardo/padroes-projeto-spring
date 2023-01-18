@@ -18,28 +18,33 @@ import jakarta.validation.Valid;
 @RequestMapping("/api/produtos")
 public class ProdutoController {
 
-    @Autowired
+	@Autowired
 	public ProdutoRepository produtoRepository;
-	
-	@RequestMapping(method = {RequestMethod.POST, RequestMethod.PUT})
+
+	@RequestMapping(method = { RequestMethod.POST, RequestMethod.PUT })
 	public @ResponseBody Produto salvarProduto(@Valid Produto produto) {
 		produtoRepository.save(produto);
 		return produto;
 	}
-	
+
 	@GetMapping
-	public Iterable<Produto> obterProdutos() {		
+	public Iterable<Produto> obterProdutos() {
 		return produtoRepository.findAll();
 	}
 
-	@GetMapping(path="/{id}")
+	@GetMapping(path = "/descricao/{parteDescricao}")
+	public Iterable<Produto> obterProdutosPorDescricao(@PathVariable String parteDescricao) {
+		return produtoRepository.findByDescricaoContainingIgnoreCase(parteDescricao);
+	}
+
+	@GetMapping(path = "/{id}")
 	public Optional<Produto> obterProdutoPorId(@PathVariable int id) {
 		return produtoRepository.findById(id);
 	}
-	
-	@DeleteMapping(path="/{id}")
-	public void excluirProduto(@PathVariable int id){
+
+	@DeleteMapping(path = "/{id}")
+	public void excluirProduto(@PathVariable int id) {
 		produtoRepository.deleteById(id);
 	}
- 
+
 }
